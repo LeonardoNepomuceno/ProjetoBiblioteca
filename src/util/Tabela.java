@@ -22,7 +22,12 @@ public class Tabela {
       
         //JTable tabela = new JTable(new DefaultTableModel());
         //tabela.setVisible(true);
-        JTable tabela = new JTable(new MyTableModel(new Vector<Object>()));
+        JTable tabela = new JTable(new MyTableModel( new Vector<Object>(),
+                                                     new Class[] { String.class, String.class, String.class },
+                                                     new String[] { "Coluna1" , "Coluna2" , "Coluna3" },
+                                                     new Object[][] { { "valor1" , "valor2" , "valor3" }}
+                                                    ) 
+                                    );
         
         
         //DefaultTableModel modeloTabela = (DefaultTableModel) tabela.getModel();    

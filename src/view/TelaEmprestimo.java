@@ -17,7 +17,11 @@ public class TelaEmprestimo extends javax.swing.JInternalFrame {
     Tabela utilTabela = new Tabela();
     JTable tabela;
     //DefaultTableModel modelo = new DefaultTableModel();
-    MyTableModel modelo = new MyTableModel(new Vector<Object>());
+    MyTableModel modelo = new MyTableModel(new Vector<Object>(),
+                                           new Class[] { String.class, String.class, String.class },
+                                           new String[] { "Coluna1" , "Coluna2" , "Coluna3" },
+                                           new Object[][] { { "valor1" , "valor2" , "valor3" }}
+                                           );
     
     
     public TelaEmprestimo() {
